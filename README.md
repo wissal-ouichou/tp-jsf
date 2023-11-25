@@ -1,11 +1,13 @@
 # tp-jsf
 Cette application permet de gérer les services et les employés en utilisant JavaServerFaces.
-# Page d'authentification
-
 
 # Base de données 
 <img width="411" alt="bdd" src="https://github.com/wissal-ouichou/tp-jsf/assets/147499172/5cf874aa-8bc1-4f8c-8ff4-921f82609cb0">
 <img width="740" alt="bdd1" src="https://github.com/wissal-ouichou/tp-jsf/assets/147499172/65ad7a99-5908-460c-9f4e-8ccf8af27006">
+
+# Page d'authentification
+<img width="903" alt="pageAuthentification1" src="https://github.com/wissal-ouichou/tp-jsf/assets/147499172/b8c3dca5-6798-499e-befa-eb6bd78a7a50">
+<img width="330" alt="pageAuthentification2" src="https://github.com/wissal-ouichou/tp-jsf/assets/147499172/76664c61-4036-4eb9-b947-8769e1175614">
 
 # Gestion des services
 <img width="958" alt="tpJSF1" src="https://github.com/wissal-ouichou/tp-jsf/assets/147499172/77c3ffe8-6016-4b89-ac88-aa151050a8cf">
