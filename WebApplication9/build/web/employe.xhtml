@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+<p:layoutUnit position="center">
+                    <h:form>
+                        <p:panel header="Gestion des employes">
+                            <p:panelGrid columns="5">
+                                <p:outputLabel value="Nom"></p:outputLabel>
+                                <p:inputText value="#{employeBean.service.nom}"></p:inputText>
+                                <p:outputLabel value="Prenom"></p:outputLabel>
+                                <p:inputText value="#{employeBean.service.prenom}"></p:inputText>
+                                <p:outputLabel value="DateNaissance"></p:outputLabel>
+                                <p:inputText value="#{employeBean.service.dateNaissance}"></p:inputText>
+                                <p:outputLabel value="Chef"></p:outputLabel>
+                                <p:inputText value="#{employeBean.service.chef}"></p:inputText>
+                                <p:outputLabel value="Service"></p:outputLabel>
+                                <p:inputText value="#{employeBean.service.service}"></p:inputText>
+                                <p:commandButton value="Add" actionListener="#{employeBean.onCreateAction()}" update=":f"></p:commandButton>
+                            </p:panelGrid>
+                        </p:panel>
+                    </h:form>
+
+                    <p:panel header="Liste">
+                        <h:form id="f">
+                            <p:dataTable var="s"  value="#{employeBean.services}">
+                                <p:column filterBy="#{s.service.getId()}" headerText="id-Service">
+                                    <h:outputText value="#{s.id-Service}"></h:outputText>
+                                </p:column>
+                                <p:column headerText="nom">
+                                    <h:outputText value="#{s.nom}"></h:outputText>
+                                </p:column>
+                                <p:column headerText="prenom">
+                                    <h:outputText value="#{s.prenom}"></h:outputText>
+                                </p:column>
+                                <p:column headerText="dateNaissance">
+                                    <h:outputText value="#{s.dateNaissance}"></h:outputText>
+                                </p:column>
+                                <p:column headerText="chef">
+                                    <h:outputText value="#{s.chef}"></h:outputText>
+                                </p:column>
+                                <p:column headerText="service">
+                                    <h:outputText value="#{s.service}"></h:outputText>
+                                </p:column>
+                            </p:dataTable>
+                        </h:form>
+                    </p:panel>
+                </p:layoutUnit>
+
+            </p:layout>
+
+        </h:body>
+
+    </f:view>
+
+</html>

@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <body>
+
+        <ui:composition template="./template/template.xhtml">
+
+            <ui:define name="content">
+                <h:form>
+                    <p:panel header="Gestion des employes">
+                        <p:panelGrid  columns="5">
+                            <p:outputLabel value="Nom : "></p:outputLabel>
+                            <p:inputText value="#{employeBean.employe.nom}"></p:inputText>
+                            <p:outputLabel value="Prenom : "></p:outputLabel>
+                            <p:inputText value="#{employeBean.employe.prenom}"></p:inputText>
+                            <p:outputLabel value="DateNaissance : "></p:outputLabel>
+                            <p:inputText value="#{employeBean.employe.nom}"></p:inputText>
+                            <p:outputLabel value="Chef : "></p:outputLabel>
+                            <p:inputText value="#{employeBean.employe.nom}"></p:inputText>
+                            <p:outputLabel value="Service : "></p:outputLabel>
+                            <p:inputText value="#{employeBean.employe.nom}"></p:inputText>
+                            <p:commandButton value="Envoyer" actionListener="#{employeBean.onCreateAction()}" update=":employes"></p:commandButton>
+                        </p:panelGrid>
+                    </p:panel>
+                </h:form>
+                <h:form id="employes">
+                    <p:panel header="Liste des employes">
+                        <p:dataTable var="s" value="#{employeBean.employes}">
+                         
+                            <p:column sortBy="#{s.nom}" headerText="Nom">
+                                <p:outputLabel value="#{s.nom}"></p:outputLabel>
+                                </p:column>
+                                 <p:column sortBy="#{s.prenom}" headerText="Prenom">
+                                <p:outputLabel value="#{s.prenom}"></p:outputLabel>
+                                </p:column>
+                                 <p:column sortBy="#{s.dateNaissance}" headerText="DateNaissance">
+                                <p:outputLabel value="#{s.dateNaissance}"></p:outputLabel>
+                                </p:column>
+                             <p:column sortBy="#{s.chef}" headerText="Chef">
+                                <p:outputLabel value="#{s.chef.getId()}"></p:outputLabel>
+                                </p:column>
+                                 <p:column sortBy="#{s.service.getId()}" headerText="Service">
+                                <p:outputLabel value="#{s.service.getId()}"></p:outputLabel>
+                            </p:column>
+                        </p:dataTable>
+                    </p:panel>
+
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
